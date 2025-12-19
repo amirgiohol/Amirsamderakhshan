@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='profaile_home'),
+    path('', views.home, name='home'),
+    # یا هر ویوی دیگری که داری
 ]
