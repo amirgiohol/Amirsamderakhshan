@@ -1,0 +1,42 @@
+<!-- """AmirsamDerakhshan""" -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="/static/images/Screenshot 2025-08-27 130029.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AmirSamDerakhshan</title>
+</head>
+<body>
+    {% include 'main/header_main.html' %}
+    <aside class="progress-nav">
+        <nav>
+            <ul>
+                <li><a href="#personal-header"><span>Profaile</span></a></li>
+                <li><a href="#skills-container"><span>Skills</span></a></li>
+                <li><a href="#about-continer"><span>About</span></a></li>
+                <li><a href="#contact-form"><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        {% block content %}
+        {% include 'main/skills.html' %}
+        {% block about %}
+        {% include 'main/about.html' %}
+        {% endblock %}
+        {% endblock %}
+
+    </main>
+
+    {% include 'main/footer_main.html' %}
+
+    <script src="{% static 'js/main_js.js' %}"></script>
+    <script src="{% static 'js/navbar_main.js' %}"></script>
+</body>
+</html>
