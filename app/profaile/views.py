@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'home.html')  # یا template مربوطه
+    return render(request, 'core/index.html')  # یا template مربوطه
