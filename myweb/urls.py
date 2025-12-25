@@ -1,9 +1,8 @@
-from django.http import HttpResponse
-from django.urls import path
-
-def home(request):
-    return HttpResponse("OK")
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path("", home),
+    path("admin/", admin.site.urls),
+    path("", include("app.profaile.urls")),
+    path("contact/", include("app.contact.urls")),
 ]
