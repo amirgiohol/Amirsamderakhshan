@@ -152,3 +152,10 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Railway / Proxy settings
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
+
+# اگر این خط را داری، موقتاً کامنت کن
+# SECURE_SSL_REDIRECT = True
