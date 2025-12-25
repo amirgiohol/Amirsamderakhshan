@@ -27,7 +27,8 @@
     <main>
         {% block content %}{% endblock %}
     </main>
-
+    {% include "main/about.html" %}
+    {% include "main/skills.html" %}
     {% include 'main/footer_main.html' %}
 
     <script src="{% static 'js/main_js.js' %}"></script>
