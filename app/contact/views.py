@@ -18,7 +18,8 @@ def contact_view(request):
     else:
         form = ContactForm()
     
-    return render(request, 'main/footer_main.html', {'form': form})
+    return render(request, 'contact/contact.html', {'form': form})
+
 
 
 def get_client_ip(request):
