@@ -9,11 +9,9 @@ def health(request):
     return HttpResponse("OK")
 
 urlpatterns = [
-    path('', health),                
+    path('', health),  # فقط health
     path("admin/", admin.site.urls),
-    path("test/", health_check),  # اول این خط رو اضافه کن
-    path("", include("app.profaile.urls")),
+    path("test/", health_check),
+    path("profile/", include("app.profaile.urls")),
     path("contact/", include("app.contact.urls")),
-    
-    
 ]
