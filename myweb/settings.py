@@ -26,15 +26,9 @@ SECRET_KEY = 'django-insecure-qb^4_a4s4+v6$^z+(t$(gb5ntpjkfj8pnwy**@sg9pqf*+b)f0
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # در Railway باید False باشد
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '.railway.app',
-    '.up.railway.app',  # این را اضافه کن
-    'your-project-name.railway.app',  # نام پروژه خودت
-]
+ALLOWED_HOSTS = ["*"]
 
 
 
@@ -151,7 +145,7 @@ EMAIL_HOST_PASSWORD = 'your_app_password'      # App Password حساب Gmail
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Railway / Proxy settings
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
